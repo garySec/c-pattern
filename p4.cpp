@@ -1,26 +1,24 @@
 /*
 
-07 
-06 08 
-02 05 09 
-01 03 04 10
+10 
+04 09 
+03 05 08 
+01 02 06 07
 
 */
-
-#include<iomanip>
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {
 	int n;
-	cout << "enter row no. :";
+	cout << "enter row:";
 	cin >> n;
 	string f1 = to_string((n*(n+1))/2);
 	int f = f1.size();
-	
+
 	int a[n][n];
-	int temp[n][n];
+	int a1[n][n];
 	
 	for (int i = 0; i < n; ++i)
 	{
@@ -69,51 +67,26 @@ int main()
 			}
 		}
 	}
-	
-for (int i = n-1; i >= 0; i--)
-{
-	for (int j = 0; j < n; ++j)
+
+	int c = 0,s = 0;
+
+	for (int i = n-1; i >= 0; --i)
 	{
-		// cout << a[i][j] << " ";
-		temp[n-i-1][j] = a[i][j];
-
-	}
-	// cout << endl;
-}
-
-
-for (int i = 0; i < n; ++i)
-{
-	for (int j = 0; j < n; ++j)
-	{
-		a[i][j] = temp[i][j];
-	}
-}
-
-for (int i = 0; i < n; ++i)
-{
-	for (int j = 0; j < n; ++j)
-	{
-		for (int k = 0; k < n-1; ++k)
+		c = 0;
+		s = i;
+		while(c>=0 && c < n)
 		{
-			if (a[k+1][i]=='\0')
+			if (a[c][i]=='\0')
 			{
-				swap(a[k][i],a[k+1][i]);
+				c++;
+				continue;
+			}
+			else
+			{
+				cout << setw(f) << setfill('0') << a[c][i] << " ";
+				c++;
 			}
 		}
+			cout << endl;
 	}
-}
-
-for (int i = 0; i < n; ++i)
-{
-	for (int j = 0; j < n; ++j)	
-	{ 
-		if (a[i][j]!='\0')
-		{
-			cout << setw(f) <<setfill('0')<< a[i][j] << " "; 
-		}
-	}
-	cout << endl;
-}	
-
 }

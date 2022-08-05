@@ -1,11 +1,22 @@
+/*
+    *
+   * *
+  *   *
+ *     *
+*********
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
-
 
 int main(){
 
 	int n,k=0;
+	cout << "enter :";
 	cin >> n;
+	string f1 = to_string((n*(n+1))/2);
+	int f = f1.size();
 
 	for (int i = n; i >= 1; --i)
 	{

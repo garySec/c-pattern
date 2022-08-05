@@ -1,3 +1,14 @@
+/*
+      x
+     xxx
+    xxxxx
+   xxxxxxx
+  xxxxxxxxx
+ xxxxxxxxxxx
+xxxxxxxxxxxxx
+
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -36,13 +47,3 @@ int main()
 	triangle(row);
 	return 0;
 }
-
-/*
-      x
-     xxx
-    xxxxx
-   xxxxxxx
-  xxxxxxxxx
- xxxxxxxxxxx
-xxxxxxxxxxxxx
-*/

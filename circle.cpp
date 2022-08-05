@@ -8,6 +8,7 @@ int pth (int x,int y)  {
 int main ( )  {
 
     int r;
+    cout << "enter val:"
     cin >> r;
 
     const int width=r;

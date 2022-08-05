@@ -1,9 +1,24 @@
+/*
+
+01 
+02 03 
+06 05 04 
+07 08 09 10 
+15 14 13 12 11
+
+*/
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
 int main()
 {
-	int n = 5;
+	int n;
+	cout << "enter row:";
+	cin >> n;
+	string f1 = to_string((n*(n+1))/2);
+	int f = f1.size();
+
 	int a[n][n];
 	int ar[n];
 
@@ -33,12 +48,12 @@ int main()
 		{
 			if (i%2==0)
 			{
-				cout << t << "\t";
+				cout << setw(f) << setfill('0') << t << " ";
 				t--;
 			}
 			else
 			{
-				cout << t << "\t";
+				cout << setw(f) << setfill('0') << t << " ";
 				t++;
 			}
 		}

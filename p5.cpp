@@ -18,7 +18,6 @@ int main()
 	cin >> n;
 	string f1 = to_string((n*(n+1))/2);
 	int f = f1.size();
-	
 	int a[n][n];
 	int temp[n][n];
 	
